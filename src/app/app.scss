@@ -1,0 +1,12 @@
+@import "../variables";
+
+body {
+  background-color: $background-gray !important;
+}
+
+.checkbox{
+  display: none !important;
+}
+.navbar {
+  position: inherit;
+}

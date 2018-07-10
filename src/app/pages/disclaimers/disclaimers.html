@@ -1,0 +1,21 @@
+<header></header>
+<div class="disclaimer-container container">
+  <span class="title-name pull-left">Legal disclaimers</span>
+  <div class="legal-content">
+    <div class="left-content pull-left">
+      <ul>
+        <li ng-class="{'active':$ctrl.tabActive === 1}" ng-click="$ctrl.tabActive = 1">
+          <a ui-sref="disclaimers.legal">Full legal</a></li>
+        <li ng-class="{'active':$ctrl.tabActive === 2}" ng-click="$ctrl.tabActive = 2">
+          <a ui-sref="disclaimers.privacy">Privacy policy</a></li>
+        <li ng-class="{'active':$ctrl.tabActive === 3}" ng-click="$ctrl.tabActive = 3">
+          <a ui-sref="disclaimers.data">Data usage policy</a></li>
+        <li ng-class="{'active':$ctrl.tabActive === 4}" ng-click="$ctrl.tabActive = 4">
+          <a ui-sref="disclaimers.term">Terms of use</a></li>
+      </ul>
+    </div>
+    <div class="right-content pull-left">
+      <ui-view></ui-view>
+    </div>
+  </div>
+</div>

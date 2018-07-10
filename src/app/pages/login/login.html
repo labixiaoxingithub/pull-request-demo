@@ -1,0 +1,28 @@
+<div class="login-container">
+  <form name="loginForm" role="form" class="login-form">
+    <ul class="title-section">
+      <li class="pwc-logo"><img src="assets/images/logo.png"></li>
+      <li class="app-title">Application name</li>
+    </ul>
+    <div class="title-bottom-line"></div>
+    <div class="login-to-your-acount">Login to your account</div>
+    <fieldset class="fieldset">
+      <label class="form-label">GUID</label>
+      <input type="text" class="text-input" name="guid" autofocus="autofocus" required
+             ng-class="{'error-red-border': loginForm.$submitted && !$ctrl.credentials.guid}"
+             ng-model="$ctrl.credentials.guid" ng-change="$ctrl.setLoginSubmitFalse(loginForm)">
+      <label class="form-label">Password</label>
+      <input type="password" class="text-input" name="password" required
+             ng-class="{'error-red-border': loginForm.$submitted && !$ctrl.credentials.password}"
+             ng-model="$ctrl.credentials.password" ng-change="$ctrl.setLoginSubmitFalse(loginForm)">
+      <span class="form-feedback" ng-if="loginForm.$submitted && !$ctrl.credentials.guid && $ctrl.credentials.password">Please enter your guid.</span>
+      <span class="form-feedback" ng-if="loginForm.$submitted && $ctrl.credentials.guid && !$ctrl.credentials.password">Please enter your password.</span>
+      <span class="form-feedback" ng-if="loginForm.$submitted && !$ctrl.credentials.guid && !$ctrl.credentials.password">Please provide a GUID and password.</span>
+      <span class="form-feedback" ng-if="loginForm.$submitted && $ctrl.credentials.guid && $ctrl.credentials.password && $ctrl.loginFailed">{{$ctrl.loginErrorMessage}}</span>
+    </fieldset>
+    <input type="checkbox" class="checkbox" id="check_1" value="check_1" name="checkboxes" ng-model="$ctrl.isRememberMeSelected">
+    <label for="check_1">Remember me</label>
+    <button type="submit" class="button button-wide" ng-click="$ctrl.login(loginForm)">Log in</button>
+    <span class="cursor-pointer forgot-password" ui-sref="forgot-password">Forgot password?</span>
+  </form>
+</div>

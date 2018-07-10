@@ -1,0 +1,21 @@
+@import "../../../variables";
+
+.navbar {
+  .dropdown {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .dropdown-toggle {
+      color: $default-color;
+      font-size: $pixel-14 !important;
+    }
+    .icon-fill-down-chevron {
+      height: $pixel-10;
+      width: $pixel-10;
+      right: 13px;
+      top: 16px;
+    }
+  }
+  .logout-svg {
+    -webkit-mask-size: cover;
+  }
+}
