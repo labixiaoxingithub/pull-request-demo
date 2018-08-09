@@ -14,6 +14,7 @@ export class HeaderController {
   $onInit() {
     this.currentUser = this.sessionService.getCurrentUser();
     this.test1 = 'test1';
+    this.test1 = 'test2';
   }
 
   switchUserSetting() {
