@@ -28,8 +28,6 @@ export class LoginController {
   }
 
   login(form) {
-    console.log(form);
-    console.log(form.$submitted);
     if (form.$valid) {
       if (this.isRememberMeSelected) {
         this.$cookies.put('loggedInUser', this.credentials.guid);
@@ -37,12 +35,10 @@ export class LoginController {
         this.$cookies.remove('loggedInUser');
       }
       this.apiService.get('src/app/shared/data/test-user.json').then(resp => {
-        console.log(resp);
         this.sessionService.setCurrentUser(resp.data);
-        console.log(this.sessionService.getCurrentUser());
         resp.data.status === 'NEW_USER' ? this.$state.go('update-password') : this.$state.go('home');
       }).catch(err => {
-        console.log(err);
+        //console.log(err);
       });
     }
   }

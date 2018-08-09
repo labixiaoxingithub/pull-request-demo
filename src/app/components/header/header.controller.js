@@ -13,6 +13,7 @@ export class HeaderController {
 
   $onInit() {
     this.currentUser = this.sessionService.getCurrentUser();
+    this.test1 = 'test1';
   }
 
   switchUserSetting() {
