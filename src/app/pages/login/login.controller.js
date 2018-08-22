@@ -38,7 +38,7 @@ export class LoginController {
         this.sessionService.setCurrentUser(resp.data);
         resp.data.status === 'NEW_USER' ? this.$state.go('update-password') : this.$state.go('home');
       }).catch(err => {
-        //console.log(err);
+        console.log(err);
       });
     }
   }
