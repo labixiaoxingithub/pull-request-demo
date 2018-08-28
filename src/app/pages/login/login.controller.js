@@ -36,6 +36,7 @@ export class LoginController {
       }
       this.apiService.get('src/app/shared/data/test-user.json').then(resp => {
         console.log(resp);
+        console.log(resp);
         this.sessionService.setCurrentUser(resp.data);
         resp.data.status === 'NEW_USER' ? this.$state.go('update-password') : this.$state.go('home');
       }).catch(err => {
