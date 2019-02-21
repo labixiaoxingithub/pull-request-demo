@@ -12,6 +12,7 @@ export class ForgotPasswordController {
   }
 
   $onInit() {
+    let test1= 'test1';
   }
 
   setForgotSubmitFalse(form) {
