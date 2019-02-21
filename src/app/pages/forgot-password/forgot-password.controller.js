@@ -12,6 +12,7 @@ export class ForgotPasswordController {
   }
 
   $onInit() {
+    let test2 = 'test2';
   }
 
   setForgotSubmitFalse(form) {
@@ -22,7 +23,7 @@ export class ForgotPasswordController {
     const emailReg = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
     if (this.email !== '' && !emailReg.test(this.email)) {
       this.resetFailed = true;
-      this.resetErrorMessage = 'Please enter the correct email address!';
+      this.resetErrorMessage = 'Please enter the correct emai l address!';
     } else if (this.email !== '' && emailReg.test(this.email)){
       this.resetFailed = false;
       this.resetErrorMessage = '';
