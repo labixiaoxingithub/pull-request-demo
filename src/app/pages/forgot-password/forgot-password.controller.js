@@ -15,6 +15,7 @@ export class ForgotPasswordController {
     let test2 = 'test2';
     let test3 = 'test3';
     let test5 = 'test5';
+    let test6 = 'test6';
   }
 
   setForgotSubmitFalse(form) {
